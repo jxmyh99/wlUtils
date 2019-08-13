@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 12:05:09
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-13 17:41:36
+ * @LastEditTime: 2019-08-12 12:05:09
  * @Description: 
  -->
 # utils
@@ -66,7 +66,8 @@
 * windowResize(downCb, upCb) H5软键盘缩回、弹起回调
 * fixedInput(className) 弹层上带表单时失焦回顶
 * isScrollBottom(ele) 计算当前滚动条是否到底 ele不传默认为body
-例子：
+
+###### 例子：
 ```
 window.addEventListener('scroll',twlutils.hrottle(300,false,function(){
 console.log(isScrollBottom())
