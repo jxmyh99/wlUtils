@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 15:14:47
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-12 15:17:40
+ * @LastEditTime: 2019-08-13 15:02:24
  * @Description: 
  */
 describe('#device API',function(){
