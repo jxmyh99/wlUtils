@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 12:05:09
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-14 14:34:05
+ * @LastEditTime: 2019-08-12 12:05:09
  * @Description: 
  -->
 # 常用工具函数的收集
@@ -146,7 +146,7 @@ wlutils.removeCookie('test')
  wlutils.isEmptyObject({a:1}) //false
 ```
 
-* hasKye(obj,key) 检测对象中是否有key
+* hasKey(obj,key) 检测对象中是否有key
 
 ```
     let obj = {a:{b:{c:{e:1,d:2}}}};
