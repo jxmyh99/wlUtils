@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-13 15:07:28
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-13 15:07:48
+ * @LastEditTime: 2019-08-14 13:47:57
  * @Description: 
  */
 describe('Dom API:', function () {
@@ -85,36 +85,36 @@ describe('Dom API:', function () {
     });
 
 
-    describe('#windowResize()', function () {
-        let innerHeight = window.innerHeight
-        it(`wlutils.windowResize(downCb) should return true`, function (done) {
-            wlutils.windowResize(function () {
-                // 键盘缩回回调
-                assert(window.innerHeight == innerHeight)
-                done()
-            }, function () {})
-            // 触发resize事件，模拟软键盘缩回
-            window.dispatchEvent(new Event('resize'));
-        })
-    });
+    // describe('#windowResize()', function () {
+    //     let innerHeight = window.innerHeight
+    //     it(`wlutils.windowResize(downCb) should return true`, function (done) {
+    //         wlutils.windowResize(function () {
+    //             // 键盘缩回回调
+    //             assert(window.innerHeight == innerHeight)
+    //             done()
+    //         }, function () {})
+    //         // 触发resize事件，模拟软键盘缩回
+    //         window.dispatchEvent(new Event('resize'));
+    //     })
+    // });
 
-    describe('#windowResize()', function () {
-        let innerHeight = window.innerHeight
-        it(`wlutils.windowResize(upCb) should return true`, function (done) {
-            wlutils.windowResize(function () {}, function () {
-                // 键盘弹起回调
-                assert(window.innerHeight === innerHeight - 200)
-                done()
-            })
-            // 设置innerHeight，模拟软键盘弹起
-            window.innerHeight = innerHeight - 200
-            // 触发resize事件
-            window.dispatchEvent(new Event('resize'));
-        })
-        after(function(){
-            window.innerHeight = innerHeight
-        })
-    });
+    // describe('#windowResize()', function () {
+    //     let innerHeight = window.innerHeight
+    //     it(`wlutils.windowResize(upCb) should return true`, function (done) {
+    //         wlutils.windowResize(function () {}, function () {
+    //             // 键盘弹起回调
+    //             assert(window.innerHeight === innerHeight - 200)
+    //             done()
+    //         })
+    //         // 设置innerHeight，模拟软键盘弹起
+    //         window.innerHeight = innerHeight - 200
+    //         // 触发resize事件
+    //         window.dispatchEvent(new Event('resize'));
+    //     })
+    //     after(function(){
+    //         window.innerHeight = innerHeight
+    //     })
+    // });
 
 
 });

@@ -1,3 +1,11 @@
+/*
+ * @Author: 明月寒
+ * @Github: http://www.33u3.com
+ * @Date: 2019-08-13 15:02:05
+ * @LastEditors: 明月寒
+ * @LastEditTime: 2019-08-14 09:23:47
+ * @Description: 
+ */
 describe('Object API:', function () {
     describe('#deepClone()', function () {
         it(`person deepEqual wlutils.deepClone(null) should return true`, function () {
@@ -53,4 +61,21 @@ describe('Object API:', function () {
             assert.notEqual(wlutils.isEmptyObject([]), true)
         });
     });
+
+    describe('#hasKey()',function(){
+        let obj = {a:{b:{c:{e:1,d:2}}}};
+        it(`wlutils.hasKey(obj,'a.b') should return true`,function(){
+            assert(wlutils.hasKey(obj,'a.b'))
+        })
+        it(`wlutils.hasKey(obj,'d') should return false`,function(){
+            assert.notEqual(wlutils.hasKey(obj,'d'),true)
+        })
+        it(`wlutils.hasKey(obj,'a.b.c.d') should return true`,function(){
+            assert(wlutils.hasKey(obj,'a.b.c.d'),true)
+        })
+        
+        it(`wlutils.hasKey(obj,'a.b.c.f') should return false`,function(){
+            assert.notEqual(wlutils.hasKey(obj,'a.b.c.f'),true)
+        })
+    })
 })
