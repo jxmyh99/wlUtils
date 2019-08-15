@@ -3,11 +3,13 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 10:50:43
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-12 11:30:43
+ * @LastEditTime: 2019-08-15 09:33:44
  * @Description: webpack打包入口文件  
  * @Example: 自动引入子目录下所有js文件
  */
-let moduleExports = {};
+let moduleExports = {
+    ver:'1.0.0'
+};
 
 const r = require.context('./', true, /^\.\/.+\/.+\.js$/);
 r.keys().forEach(key => {
