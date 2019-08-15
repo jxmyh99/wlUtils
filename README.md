@@ -3,14 +3,14 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 12:05:09
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-12 12:05:09
+ * @LastEditTime: 2019-08-15 09:23:33
  * @Description: 
  -->
 # 常用工具函数的收集
 在前端工作中有一些常用的，使用频率比较高的函数，为了增快开发速度，特此把那些函数封装起来
 ## :building_construction:  安装使用
 
-1. 直接下载`min`目录下的[wlutils.min.js](https://github.com/jxmyh99/wlUtils/blob/3a02da35c74f176b7532633e531e0462dd924b23/dist/wlutils.min.js)使用，支持UMD通用模块规范  
+1. 直接下载`dist`目录下的[wlutils.min.js](https://github.com/jxmyh99/wlUtils/blob/3a02da35c74f176b7532633e531e0462dd924b23/dist/wlutils.min.js)使用，支持UMD通用模块规范  
 2. 使用npm安装
 
 ### 浏览器:
