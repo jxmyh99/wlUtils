@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 11:45:58
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-12 16:35:29
+ * @LastEditTime: 2019-08-15 09:25:58
  * @Description: 
  */
 describe('regExp API:', function () {
@@ -54,6 +54,9 @@ describe('regExp API:', function () {
         });
         it(`wlutils.isLicenseNo("浙aF21345") should return true`, function () {
 			assert(wlutils.isLicenseNo("浙aF21345"))
+        });
+        it(`大车电动车牌wlutils.isLicenseNo("浙a12134d") should return true`, function () {
+			assert(wlutils.isLicenseNo("浙a12134d"))
         });
         it(`wlutils.isLicenseNo("军a12344") should return true`,function(){
             assert(!wlutils.isLicenseNo("军a12344"))
