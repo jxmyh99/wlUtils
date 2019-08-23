@@ -3,13 +3,16 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 11:45:58
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-23 17:38:25
+ * @LastEditTime: 2019-08-23 17:45:51
  * @Description: 
  */
 describe('regExp API:', function () {
     describe('#isMobile',function(){
         it(`wlutils.isMobile('13412123232') should return true`,function(){
             assert(wlutils.isMobile('13412123232'),true)
+        })
+        it(`wlutils.isMobile('15412123232') should return true`,function(){
+            assert(wlutils.isMobile('15412123232'),true)
         })
         it(`wlutils.isMobile('17312123232') should return true`,function(){
             assert(wlutils.isMobile('17312123232'),true)
