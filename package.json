@@ -1,6 +1,6 @@
 {
     "name": "wlutils",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "description": "封装模块及组件时所使用的代码架构",
     "main": "min/wlutils.min.js",
     "scripts": {
