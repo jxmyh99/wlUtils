@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 12:05:09
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-15 09:23:33
+ * @LastEditTime: 2019-08-23 17:23:03
  * @Description: 
  -->
 # 常用工具函数的收集
@@ -258,3 +258,7 @@ wlutils.timeLeft(startTime, endTime)
 * accSub() 减法运算
 * accMul() 乘法运算
 * accDiv() 除法运算
+
+
+## v1.1.1
+* 手机号段新增加173和199号段
