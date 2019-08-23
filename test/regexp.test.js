@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 11:45:58
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-23 17:23:31
+ * @LastEditTime: 2019-08-23 17:38:25
  * @Description: 
  */
 describe('regExp API:', function () {
@@ -16,6 +16,33 @@ describe('regExp API:', function () {
         })
         it(`wlutils.isMobile('19912123232') should return true`,function(){
             assert(wlutils.isMobile('19912123232'),true)
+        })
+        it(`wlutils.isMobile('14912123232') should return true`,function(){
+            assert(wlutils.isMobile('14912123232'),true)
+        })
+        it(`wlutils.isMobile('17312123232') should return true`,function(){
+            assert(wlutils.isMobile('17312123232'),true)
+        })
+        it(`wlutils.isMobile('19112123232') should return true`,function(){
+            assert(wlutils.isMobile('19112123232'),true)
+        })
+        it(`wlutils.isMobile('19312123232') should return true`,function(){
+            assert(wlutils.isMobile('19312123232'),true)
+        })
+        it(`wlutils.isMobile('16612123232') should return true`,function(){
+            assert(wlutils.isMobile('16612123232'),true)
+        })
+        it(`wlutils.isMobile('17112123232') should return true`,function(){
+            assert(wlutils.isMobile('17112123232'),true)
+        })
+        it(`wlutils.isMobile('17512123232') should return true`,function(){
+            assert(wlutils.isMobile('17512123232'),true)
+        })
+        it(`wlutils.isMobile('17212123232') should return true`,function(){
+            assert(wlutils.isMobile('17212123232'),true)
+        })
+        it(`wlutils.isMobile('19812123232') should return true`,function(){
+            assert(wlutils.isMobile('19812123232'),true)
         })
         it(`wlutils.isMobile('1') should return false`,function(){
             assert.notEqual(wlutils.isMobile('1'),true)
