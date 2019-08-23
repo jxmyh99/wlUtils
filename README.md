@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 12:05:09
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-08-23 17:23:03
+ * @LastEditTime: 2019-08-23 17:42:44
  * @Description: 
  -->
 # 常用工具函数的收集
@@ -261,4 +261,4 @@ wlutils.timeLeft(startTime, endTime)
 
 
 ## v1.1.1
-* 手机号段新增加173和199号段
+* 手机号段新增加173,199,149,173,191,199,193,166,171,175,172,198号段
