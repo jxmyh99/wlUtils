@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 12:05:09
  * @LastEditors: 明月寒
- * @LastEditTime: 2019-11-27 17:19:18
+ * @LastEditTime: 2020-07-24 10:24:52
  * @Description:
  -->
 
@@ -35,7 +35,7 @@ webpack、RequireJS、SeaJS 等
 
 ```javascript
 // 完整引入
-const wlutils = require("wlutils");
+const wlutils = require('wlutils');
 const OS = wlutils.getOS();
 ```
 
@@ -45,7 +45,7 @@ const OS = wlutils.getOS();
 
 ```javascript
 // 只引入部分方法('wlutils/<方法名>')
-const getOS = require("wlutils/getOS");
+const getOS = require('wlutils/getOS');
 const OS = getOS();
 ```
 
@@ -283,6 +283,12 @@ wlutils.timeLeft(startTime, endTime)
 - accSub() 减法运算
 - accMul() 乘法运算
 - accDiv() 除法运算
+
+###v1.1.7
+
+- 修复正则传入的参数没有进行清除空格的问题
+
+- 在`parseQueryString` 新增加了两个参数用于是否全部小写还是 key 小写
 
 ###v1.1.5
 
