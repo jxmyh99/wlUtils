@@ -284,6 +284,15 @@ wlutils.timeLeft(startTime, endTime)
 - accMul() 乘法运算
 - accDiv() 除法运算
 
+###v1.1.8
+
+- 修改了新的手机号码段
+
+- 添加了一个新的`setCddCookie`方法
+
+- 修复`parseQueryString`方法
+
+
 ###v1.1.7
 
 - 修复正则传入的参数没有进行清除空格的问题

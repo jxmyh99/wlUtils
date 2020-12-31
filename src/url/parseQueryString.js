@@ -1,3 +1,11 @@
+/*
+ * @Author: 明月寒
+ * @Github: http://www.33u3.com
+ * @Date: 2019-08-13 11:10:48
+ * @LastEditors: 明月寒
+ * @LastEditTime: 2020-12-30 18:12:43
+ * @Description:
+ */
 /**
  *
  * @desc   url参数转对象
@@ -9,20 +17,25 @@ function parseQueryString(url, lowercase = false, isGlobal = false) {
   if (isGlobal) {
     url = url.toLocaleLowerCase();
   }
-  if (url.indexOf('?') === -1) {
+  if (url.indexOf("?") === -1) {
     return {};
   }
-  var search =
-    url[0] === '?' ? url.substr(1) : url.substring(url.lastIndexOf('?') + 1);
-  if (search === '') {
+  var search = url.substr(url.lastIndexOf("?") + 1);
+  if (search === "") {
     return {};
   }
-  search = search.split('&');
+  search = search.split("&");
   var query = {};
   for (var i = 0; i < search.length; i++) {
-    let pair = search[i].split('=');
-    let JsonKey = lowercase ? pair[0].toLocaleLowerCase() : pair[0];
-    query[decodeURIComponent(JsonKey)] = decodeURIComponent(pair[1] || '');
+    let pair = search[i].indexOf("=");
+    if (pair > 0) {
+      let JsonKey = lowercase
+        ? search[i].substring(0, pair).toLocaleLowerCase()
+        : search[i].substring(0, pair);
+      query[decodeURIComponent(JsonKey)] = decodeURIComponent(
+        search[i].substr(pair + 1) || ""
+      );
+    }
   }
   return query;
 }
