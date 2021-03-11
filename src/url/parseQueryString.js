@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-13 11:10:48
  * @LastEditors: 明月寒
- * @LastEditTime: 2020-12-30 18:12:43
+ * @LastEditTime: 2021-03-11 14:36:01
  * @Description:
  */
 /**
@@ -20,7 +20,7 @@ function parseQueryString(url, lowercase = false, isGlobal = false) {
   if (url.indexOf("?") === -1) {
     return {};
   }
-  var search = url.substr(url.lastIndexOf("?") + 1);
+  var search = url.replace(/#/g, "").substr(url.lastIndexOf("?") + 1);
   if (search === "") {
     return {};
   }
