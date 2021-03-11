@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2021-03-11 10:19:23
  * @LastEditors: 明月寒
- * @LastEditTime: 2021-03-11 11:14:27
+ * @LastEditTime: 2021-03-11 14:49:43
  * @Description:
  */
 
@@ -34,12 +34,17 @@ function ajaxGetInterfaceDomain(domain = "auto") {
     if (domain.includes("auto") || domain.includes("open")) {
       currentInterfaceServerNO = "";
     } else if (typeof strUrl.apihost == "undefined") {
-      currentInterfaceServerNO = isNull(getCookie(APICOOKIENAME))
+      currentInterfaceServerNO = isNull(
+        getCookie(APICOOKIENAME).replace(/#/g, "")
+      )
         ? ""
-        : getCookie(APICOOKIENAME);
+        : getCookie(APICOOKIENAME).replace(/#/g, "");
     } else {
-      setCookie(APICOOKIENAME, strUrl.apihost, 100000);
-      currentInterfaceServerNO = strUrl.apihost <= 1 ? "" : strUrl.apihost;
+      setCookie(APICOOKIENAME, strUrl.apihost.replace(/#/g, ""), 100000);
+      currentInterfaceServerNO =
+        strUrl.apihost.replace(/#/g, "") <= 1
+          ? ""
+          : strUrl.apihost.replace(/#/g, "");
     }
 
     if (env == "local") {
