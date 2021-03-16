@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2021-03-11 10:19:23
  * @LastEditors: 明月寒
- * @LastEditTime: 2021-03-11 14:49:43
+ * @LastEditTime: 2021-03-16 08:47:04
  * @Description:
  */
 
@@ -58,7 +58,7 @@ function ajaxGetInterfaceDomain(domain = "auto") {
       }.chediandian.com`;
     }
   } else {
-    currentInterfaceServer = "http://10.0.0.225:3000";
+    currentInterfaceServer = "http://10.0.0.225:3030";
   }
   return currentInterfaceServer;
 }
