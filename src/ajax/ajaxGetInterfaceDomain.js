@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2021-03-11 10:19:23
  * @LastEditors: 明月寒
- * @LastEditTime: 2021-03-16 08:47:04
+ * @LastEditTime: 2021-04-06 11:33:18
  * @Description:
  */
 
@@ -37,6 +37,8 @@ function ajaxGetInterfaceDomain(domain = "auto") {
       currentInterfaceServerNO = isNull(
         getCookie(APICOOKIENAME).replace(/#/g, "")
       )
+        ? ""
+        : getCookie(APICOOKIENAME).replace(/#/g, "") <= 1
         ? ""
         : getCookie(APICOOKIENAME).replace(/#/g, "");
     } else {
