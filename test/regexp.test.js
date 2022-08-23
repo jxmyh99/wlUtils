@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 11:45:58
  * @LastEditors: 明月寒
- * @LastEditTime: 2020-12-30 18:25:26
+ * @LastEditTime: 2021-06-13 23:00:47
  * @Description:
  */
 describe("regExp API:", function () {
@@ -54,61 +54,11 @@ describe("regExp API:", function () {
       assert.notEqual(wlutils.isMobile("1"), true);
     });
     const mobileArr = [
-      130,
-      131,
-      132,
-      133,
-      134,
-      135,
-      136,
-      137,
-      138,
-      139,
+      130, 131, 132, 133, 134, 135, 136, 137, 138, 139,
       // 141,
-      145,
-      146,
-      147,
-      148,
-      149,
-      150,
-      151,
-      152,
-      153,
-      155,
-      156,
-      157,
-      158,
-      159,
-      162,
-      165,
-      166,
-      167,
-      169,
-      170,
-      171,
-      172,
-      173,
-      175,
-      176,
-      177,
-      178,
-      179,
-      180,
-      181,
-      182,
-      183,
-      184,
-      185,
-      186,
-      187,
-      188,
-      189,
-      191,
-      193,
-      195,
-      196,
-      198,
-      199,
+      145, 146, 147, 148, 149, 150, 151, 152, 153, 155, 156, 157, 158, 159, 162,
+      165, 166, 167, 169, 170, 171, 172, 173, 175, 176, 177, 178, 179, 180, 181,
+      182, 183, 184, 185, 186, 187, 188, 189, 191, 193, 195, 196, 198, 199,
     ];
     mobileArr.map((element) => {
       it(`wlutils.isMobile('${element}12123232') should return true`, function () {
@@ -142,9 +92,43 @@ describe("regExp API:", function () {
     });
   });
   describe("#isLicenseNo", function () {
+    let JsonData = [
+      {
+        No: "浙AOp1345",
+        Result: "false",
+      },
+      {
+        No: "浙Aop1345",
+        Result: "false",
+      },
+      {
+        No: "浙AIp1345",
+        Result: "false",
+      },
+      {
+        No: "浙Aip1345",
+        Result: "false",
+      },
+    ];
     it(`wlutils.isLicenseNo("浙a12 345") should return true`, function () {
       assert(wlutils.isLicenseNo("浙a12345"));
     });
+    it(`wlutils.isLicenseNo("浙app1345") should return true`, function () {
+      assert(wlutils.isLicenseNo("浙ad21345"));
+    });
+    it(`wlutils.isLicenseNo("浙AOp1345") should return false`, function () {
+      assert.notEqual(wlutils.isLicenseNo("浙AOp1345"));
+    });
+    it(`wlutils.isLicenseNo("浙Aop1345") should return false`, function () {
+      assert.notEqual(wlutils.isLicenseNo("浙Aop1345"));
+    });
+    it(`wlutils.isLicenseNo("浙AIp1345") should return false`, function () {
+      assert.notEqual(wlutils.isLicenseNo("浙AIp1345"));
+    });
+    it(`wlutils.isLicenseNo("浙Aip1345") should return false`, function () {
+      assert.notEqual(wlutils.isLicenseNo("浙AIp1345"));
+    });
+
     it(`wlutils.isLicenseNo("浙ad21345") should return true`, function () {
       assert(wlutils.isLicenseNo("浙ad21345"));
     });

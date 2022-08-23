@@ -3,7 +3,7 @@
  * @Github: http://www.33u3.com
  * @Date: 2019-08-12 12:05:09
  * @LastEditors: 明月寒
- * @LastEditTime: 2020-07-24 10:24:52
+ * @LastEditTime: 2021-06-13 23:04:34
  * @Description:
  -->
 
@@ -35,7 +35,7 @@ webpack、RequireJS、SeaJS 等
 
 ```javascript
 // 完整引入
-const wlutils = require('wlutils');
+const wlutils = require("wlutils");
 const OS = wlutils.getOS();
 ```
 
@@ -45,7 +45,7 @@ const OS = wlutils.getOS();
 
 ```javascript
 // 只引入部分方法('wlutils/<方法名>')
-const getOS = require('wlutils/getOS');
+const getOS = require("wlutils/getOS");
 const OS = getOS();
 ```
 
@@ -284,6 +284,10 @@ wlutils.timeLeft(startTime, endTime)
 - accMul() 乘法运算
 - accDiv() 除法运算
 
+###V1.1.9
+
+- 修改`isLicenseNo`方法里对于车牌号的判断第二位除了`o`、`O`、`I`和`i`之外的所有的字符
+
 ###v1.1.8
 
 - 修改了新的手机号码段
@@ -291,7 +295,6 @@ wlutils.timeLeft(startTime, endTime)
 - 添加了一个新的`setCddCookie`方法
 
 - 修复`parseQueryString`方法
-
 
 ###v1.1.7
 
